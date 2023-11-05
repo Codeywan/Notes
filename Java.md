@@ -60,16 +60,96 @@ public class Person {
     }
 
     public void printPerson() {
-        System.out.println(this.name + "is " + this.age + "years old") {
+        System.out.println(this.name + "is " + this.age + "years old") 
     }
 }
 ```
 
-`printPerson()` is a method that takes no arguments
+`printPerson()` is a method that takes no parameters
 `public` means it is intended to be visible and accessible from outside this class
 `void` means the method does not return a value
 
 `static` modifier means the method does not belong to an object, so it cannot access any variables that belong to an object
+
+`this.age` means "this" object's age instance variable
+
+###### Returning a value with a method
+
+```Java
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String initialName) {
+        this.age = 0;
+        this.name = initialName;
+    }
+
+    public int getAge() {
+         return this.age;
+    }
+}
+```
+
+The above example replaces `void` with `int` and indicates that the method will return an integer. This specific method example is called a "getter" because it "gets" the object age
+
+###### String Representation and toString Method
+
+```Java
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String initialName) {
+        this.age = 0;
+        this.name = initialName;
+    }
+
+    public int getAge() {
+         return this.age;
+    }
+
+    public String toString() {
+        return this.name + ", age: " + this.age;
+    }
+}
+```
+
+The `toString()` method is the preferred way for defining the string representation of an object. Not using `print` methods in the class
+
+Instead of calling the `toString()` method like `john.toString()` as you would with other methods, it is used like this:
+
+```Java
+Person john = new Person("John");
+
+System.out.println(john);
+```
+Java automatically retreives the string representation by extending the call to function as:
+```Java
+System.out.println(john.toString());
+```
+
+#### Obects in Lists
+
+```Java
+ArrayList<String> strings = new ArrayList<>();
+```
+Makes a list to hold strings
+
+```Java
+ArrayList<Integer> numbers = new ArrayList<>();
+```
+Makes a list to hold integers
+
+```Java
+ArrayList<Person> people = new ArrayList<>();
+```
+Makes a list to hold `Person` objects
+
+
+
+
+
 
 
 
