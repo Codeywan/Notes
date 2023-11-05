@@ -6,14 +6,14 @@
 * __Object:__ An instance of a class (An individual house)<br>
 
 
-#### Methods
+### Methods
 
 
-###### Constructor
+##### Constructor
 
 A method that creates an object and sets the default values. Defined in the class.
 
-###### Creating a Class:
+##### Creating a Class:
         
 __Example__:
 For a "Person" class, the file would be named `Person.java`
@@ -27,7 +27,7 @@ public class Person {
 
 The class above has two private variables for a Person object. The instance variables are private to keep from being altered. Called encapsulation
 
-###### Using a Constructor
+##### Using a Constructor
 
 ```Java
 public class Person {
@@ -47,7 +47,7 @@ The name of the constructor is always the same as the class name. The constructo
 
 If constructor is not defined, it usually sets values to null or 0
 
-###### Methods other than the constructor 
+##### Methods other than the constructor 
 
 ```Java
 public class Person {
@@ -73,7 +73,7 @@ public class Person {
 
 `this.age` means "this" object's age instance variable
 
-###### Returning a value with a method
+##### Returning a value with a method
 
 ```Java
 public class Person {
@@ -93,7 +93,7 @@ public class Person {
 
 The above example replaces `void` with `int` and indicates that the method will return an integer. This specific method example is called a "getter" because it "gets" the object age
 
-###### String Representation and toString Method
+##### String Representation and toString Method
 
 ```Java
 public class Person {
@@ -129,7 +129,7 @@ Java automatically retreives the string representation by extending the call to 
 System.out.println(john.toString());
 ```
 
-#### Obects in Lists
+### Obects in Lists
 
 ```Java
 ArrayList<String> strings = new ArrayList<>();
