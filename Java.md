@@ -14,9 +14,8 @@
 A method that creates an object and sets the default values. Defined in the class.
 
 ###### Creating a Class:
-
+        
 __Example__:
-
 For a "Person" class, the file would be named `Person.java`
 
 ```Java
@@ -39,10 +38,6 @@ public class Person {
         this.age = 0;
         this.name = initialName;
     }
-
-    public void printPerson() {
-        System.out.println(this.name + "is " + this.age + "years old") {
-    }
 }
 ```
 
@@ -52,7 +47,30 @@ The name of the constructor is always the same as the class name. The constructo
 
 If constructor is not defined, it usually sets values to null or 0
 
-###### Methods other than constructor 
+###### Methods other than the constructor 
+
+```Java
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String initialName) {
+        this.age = 0;
+        this.name = initialName;
+    }
+
+    public void printPerson() {
+        System.out.println(this.name + "is " + this.age + "years old") {
+    }
+}
+```
+
+`printPerson()` is a method that takes no arguments
+`public` means it is intended to be visible and accessible from outside this class
+`void` means the method does not return a value
+
+`static` modifier means the method does not belong to an object, so it cannot access any variables that belong to an object
+
 
 
 
