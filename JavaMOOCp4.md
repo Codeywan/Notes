@@ -1,5 +1,8 @@
 # JAVA REFRESHER
 
+things to add:
+
+`.equals`
 
 
 ## Classes and Objects
@@ -197,7 +200,35 @@ while(true) {
 1. `Integer.valueOf()` converts the string type input into an integer type
 
 
+##### Reading From a File
 
+```Java
+// Import utilities in order to use scanner and paths
+import java.util.Scanner;
+import java.nio.file.Paths;
+
+try (Scanner scanner = new Scanner(Paths.get("file.txt"))) {
+
+    while (scanner.hasNextLine()) {
+        String row = scanner.nextLine();
+        // If the line is empty, skip it
+        if (row.isEmpty()) {
+            continue;
+        }
+
+        System.out.println(row);
+    }
+
+    catch (Exception e) {
+        System.out.println("Error: " + e.getMessage());
+    }
+}
+```
+
+`Paths.get("file.txt")` reads the file from the project root
+`System.in` means system input. We used this with scanner to get user input
+
+In the above example, the program will read until all of the lines in the file have been read. Reading a file may result in an error which is why we use the `catch (Exception e)`
 
 
 
