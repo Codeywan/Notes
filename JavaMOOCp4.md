@@ -1,44 +1,5 @@
 # JAVA REFRESHER
 
-Reading input: 
-
-```Java
-Scanner scanner = new Scanner(System.in);
-String name = scanner.nextLine();
-
-System.out.println("What is your name?");
-```
-
-Create new `Scanner` object to read input
-Then call `scanner.nextLine()` method to read the next line into the name variable    
-
-##### Read information separated by commas
-
-```Java
-System.out.println("Enter information separated by commas");
-while(true) {
-    System.out.println("Enter info, empty will stop");
-    String info = scanner.nextLine();
-
-    if (info.isEmpty()) {
-        break;
-    }
-
-    String[] pieces = info.split(",");
-    String name = pieces[0];
-    int age = Integer.valueOf(parts[1]);
-    //Create new person object with inputted info and add them to persons list
-    persons.add(new Person(name, age));
-}
-```
-
-1. Read input separated by commas
-1. If input is empty, end the loop
-1. Split the info into a list of strings
-1. The position in the strings list corresponds to the piece of information
-1. `Integer.valueOf()` converts the string type input into an integer type
-
-
 
 
 ## Classes and Objects
@@ -193,6 +154,47 @@ Makes a list to hold integers
 ArrayList<Person> people = new ArrayList<>();
 ```
 Makes a list to hold `Person` objects
+
+
+## Files and Reading Data
+
+Reading input: 
+
+```Java
+Scanner scanner = new Scanner(System.in);
+String name = scanner.nextLine();
+
+System.out.println("What is your name?");
+```
+
+Create new `Scanner` object to read input
+Then call `scanner.nextLine()` method to read the next line into the name variable    
+
+##### Read information separated by commas
+
+```Java
+System.out.println("Enter information separated by commas");
+while(true) {
+    System.out.println("Enter info, empty will stop");
+    String info = scanner.nextLine();
+
+    if (info.isEmpty()) {
+        break;
+    }
+
+    String[] pieces = info.split(",");
+    String name = pieces[0];
+    int age = Integer.valueOf(parts[1]);
+    //Create new person object with inputted info and add them to persons list
+    persons.add(new Person(name, age));
+}
+```
+
+1. Read input separated by commas
+1. If input is empty, end the loop
+1. Split the info into a list of strings
+1. The position in the strings list corresponds to the piece of information
+1. `Integer.valueOf()` converts the string type input into an integer type
 
 
 
